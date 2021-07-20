@@ -1,4 +1,5 @@
 
+
 #=========================================================Benford's Law
 #Benford's law, also called the Newcomb–Benford law,
 #the law of anomalous numbers, or the first-digit law,
@@ -11,12 +12,14 @@
 #                                        log10(1+1/n)
 #import numpy n such
 import numpy as np
+#import random
+
 #Variables to hold vector dimension sizes 
 #(side thought: 'Angstroms are a measure of size)
-Vs = 100
-Vs2 = 100
+Vs =  1000
+Vs2 = 1000
 #create a big ass RANDOM array
-bigAssArray = np.random.rand(Vs, Vs)
+bigAssArray = np.random.rand(Vs, Vs2)
 #print that shiz
 print("bigAssArray")
 print(bigAssArray)
@@ -25,6 +28,7 @@ print(bigAssArray)
 i = 0
 j = 0
 #variables to hold frequency of each possible digit
+zero = 0
 one = 0
 two = 0
 three = 0
@@ -46,6 +50,8 @@ for i in range(Vs):
         elif 0.4 > bigAssArray[i][j] >= 0.3: three = three + 1
         elif 0.3 > bigAssArray[i][j] >= 0.2: two = two + 1
         elif 0.2 > bigAssArray[i][j] > 0: one = one + 1
+#	else    zero = zero + 1
+
 err = (Vs*Vs2) - (one + two + three + four + five + six + seven + eight + nine)
 print("1's: " + str(one))
 print("2's: " + str(two))
