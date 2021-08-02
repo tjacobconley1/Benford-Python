@@ -11,3 +11,6 @@
 	
 	Can this be used for error checking in neural networks?
 	because it is a percentage and not always an exact "double the amount of 1's" scenario?
+	
+	Like after each layer it runs the results from each node through a Benford error checker 
+	to make sure there isn't anything off? 
