@@ -12,7 +12,7 @@
 #                                        log10(1+1/n)
 #import numpy n such
 import numpy as np
-#import random
+
 
 #Variables to hold vector dimension sizes 
 #(side thought: 'Angstroms are a measure of size)
